@@ -1,0 +1,27 @@
+# Mini ATM
+balance = 500000   #intial balance 
+print("Welcome to Python ATM")
+action = input("what would you like to do? (Withrdraw/Deposit/Check) ").lower()
+
+#Considering the input from the user
+if action == "withdraw":
+    amount = int(input("Enter the amount to withdraw "))
+    if amount > balance:
+        print("Insufficient Balance ")
+    else:
+        balance -= amount
+        print(f"{amount} is sucessfully withdrawn")
+        print(f"{balance} : The balance in your account")
+
+elif action == "deposit":
+    amount = int(input("Enter the amount you want to deposit "))
+    balance += amount
+    print(f"{balance} : the balance in your account")
+
+elif action == "check":
+    print(f"{balance} is the balance in your account")
+
+else:
+    print("invalid statement")
+
+print("Thank you for using Python bank")
