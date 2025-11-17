@@ -1,0 +1,29 @@
+print("Welcome to 'PYTHON HOTEL', we wish you have a comfortable stay at our hotel")
+log = []   # As to enter the guest details
+
+# adding a guest
+while True:
+    Guest_Name = input("Enter tha name of the guest: ").strip()
+    if Guest_Name.lower() == "done":
+        break
+    if Guest_Name == "":
+        print("Please enter correctly")
+    else:
+        log.append(Guest_Name)
+        print(f"{Guest_Name} added!")
+
+count = {}
+for guest in log:
+    if guest in count:
+        count[guest] += 1
+    else:
+        count[guest] = 1
+
+#    Calculation of maximum visits
+max_visits = max(count.values())
+max_guest = [guest for guest, visits in count.items() if visits == max_visits]
+print(log)
+
+# Display of max guest along with thier number of visits
+print(f"Guest with maximum visits: {max_guest[0]}")
+print("Visits", max_visits)
