@@ -1,6 +1,8 @@
 # This CODE is based on youtube tutorial by "PROGRAMMING WITH MOSH" as a learning practise 
+
 weight = int(input("weight: "))
 unit = input("Enter the weight 'lbs' for 'pound' and 'kg' for 'kilograms': ")
+
 if unit.upper() == "lbs":
     converted = weight * 0.45  # converts to pounds
     print(f" The converted weight is {converted} kg")
